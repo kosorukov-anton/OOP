@@ -6,37 +6,31 @@ public class Human {
     //поля
     private int id;
     private String name;
-    private List<Human> parent;
-    private List<Human> child;
     private int birn;
     private int die;
+    private List<Human> parent;
+    private List<Human> child;
     private Human pair;
 //***********************************конструкторы
+
     public Human(String name, int birn, int die) {
-        id=0;
+        this.id=0;
         this.name = name;
         this.birn = birn;
         this.die = die;
         this.child = new ArrayList<Human>();
         this.parent = new ArrayList<Human>();
-        //this.pair=
+        pair=null;
     }
+
     public Human(String name, int birn) {
-        id=0;
-        this.name = name;
-        this.birn = birn;
-        this.die = 0;
-        this.child = new ArrayList<Human>();
-        this.parent = new ArrayList<Human>();
+        this(name,birn,0);
     }
+
     public Human(String name) {
-        id=0;
-        this.name = name;
-        this.birn = 0;
-        this.die = 0;
-        this.child = new ArrayList<Human>();
-        this.parent = new ArrayList<Human>();
+        this(name,0,0);
     }
+
 //*************************************GET
     public int getId() {
         return id;
@@ -65,7 +59,6 @@ public class Human {
     public void setId(int id) {
         this.id = id;
     }
-
     public void setBirn(int birn) {
         this.birn = birn;
     }
