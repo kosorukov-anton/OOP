@@ -1,9 +1,9 @@
-/*package writer;
-import family
+package family.writer;
+import family.Tree;
+
+import java.io.Serializable;
 
 public interface Writable {
-    boolean save(Tree tree);
-    boolean load(Tree tree);
-    void setFilePath(String filePath);
+    boolean save(Serializable serializable,String path);
+    Object read(String path);
 }
-*/

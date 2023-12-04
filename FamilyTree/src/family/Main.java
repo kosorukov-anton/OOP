@@ -1,3 +1,8 @@
+package family;
+
+import family.writer.FileHandler;
+
+import java.io.Serializable;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +20,7 @@ public class Main {
         family.addHuman(D);
 
         System.out.print("исходная семья \n"+family.outputTree()+"\n");
+        save(family);
 
         B.addParent(A);
         B.addChild(C);
@@ -24,7 +30,21 @@ public class Main {
 
         System.out.print("новые данные \n"+family.outputTree()+"\n");
 
-
+        Tree familyNEW = load();
+        System.out.print("загруженные данные \n"+familyNEW.outputTree()+"\n");
 
     }
+
+    private static void save(Tree family){
+        FileHandler fileHandler=new FileHandler();
+        String path="src/family.txt";
+        fileHandler.save(family,path);
+    }
+
+    private static Tree load(){
+        FileHandler fileHandler=new FileHandler();
+        String path="src/family.txt";
+        return (Tree) fileHandler.read(path);
+    }
+
 }

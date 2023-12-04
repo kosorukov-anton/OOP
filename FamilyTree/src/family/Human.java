@@ -1,8 +1,10 @@
-import java.time.LocalDate;
+package family;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human {
+public class Human implements Serializable {
     //поля
     private int id;
     private String name;
