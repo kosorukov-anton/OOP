@@ -3,6 +3,8 @@ import family.writer.FileHandler;
 import human.Human;
 import human.Gender;
 
+import java.io.Serializable;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -55,11 +57,5 @@ public class Main {
         String path="src/family.txt";
         return (Tree) fileHandler.read(path);
     }
-
-
-
-
-
-
 
 }

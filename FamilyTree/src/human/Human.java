@@ -1,10 +1,12 @@
 package human;
 
+import family.TreeNode;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human implements Serializable {
+public class Human implements TreeNode<Human> {
     //поля
     private int id;
     private String name;
@@ -99,10 +101,6 @@ public class Human implements Serializable {
     }
     //*************************************************ВЫВОД ИНФОРМАЦИИ
     @Override
-    public String toString() {
-        return outputHuman();
-    }
-
     public String outputHuman(){
         StringBuilder sb = new StringBuilder();
         sb.append("id: ");
@@ -152,5 +150,9 @@ public class Human implements Serializable {
         return sb.toString();
     }
 
+    @Override
+    public String toString() {
+        return outputHuman();
+    }
 }
 
