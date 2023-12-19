@@ -1,11 +1,9 @@
-package family;
+package model.family;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
-import human.Human;
-
 
 
 public class Tree<T extends TreeNode<T>> implements Serializable,Iterable<T> {
@@ -18,12 +16,13 @@ public class Tree<T extends TreeNode<T>> implements Serializable,Iterable<T> {
 
 
     //Методы
+    /*
     public void addPeople(List <T> newpeople){
         for (T human: newpeople ){
             treeMan.add(human);
         }
     }
-
+*/
     public void addHuman(T human){
         treeMan.add(human);
         //return this;
@@ -37,10 +36,8 @@ public class Tree<T extends TreeNode<T>> implements Serializable,Iterable<T> {
 
     public String outputTree(){
         StringBuilder sb = new StringBuilder();
-        int j=0;
         for (T human : treeMan ){
-            j++;
-            sb.append(j+" "+human.outputHuman()+"\n");
+            sb.append(human.outputHuman()+"\n");
         }
         return sb.toString();
     }

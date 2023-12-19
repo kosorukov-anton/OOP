@@ -1,8 +1,7 @@
-package human;
+package model.human;
 
-import family.TreeNode;
+import model.family.TreeNode;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

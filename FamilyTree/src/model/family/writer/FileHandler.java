@@ -1,6 +1,5 @@
-package family.writer;
+package model.family.writer;
 
-import family.Tree;
 import java.io.*;
 
 public class FileHandler implements Writable {

@@ -1,5 +1,4 @@
-package family;
-import human.Human;
+package model.family;
 import java.util.Iterator;
 import java.util.List;
 

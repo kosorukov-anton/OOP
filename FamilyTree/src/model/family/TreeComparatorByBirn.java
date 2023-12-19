@@ -1,5 +1,4 @@
-package family;
-import human.Human;
+package model.family;
 import java.util.Comparator;
 
 public class TreeComparatorByBirn <T extends TreeNode<T>> implements Comparator<T>{
